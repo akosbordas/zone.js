@@ -59,7 +59,7 @@
 	timers_1.patchTimer(_global, set, clear, 'Timeout');
 	timers_1.patchTimer(_global, set, clear, 'Interval');
 	timers_1.patchTimer(_global, set, clear, 'Immediate');
-	timers_1.patchTimer(_global, 'request', 'cancelMacroTask', 'AnimationFrame');
+	timers_1.patchTimer(_global, 'request', 'cancel', 'AnimationFrame');
 	timers_1.patchTimer(_global, 'mozRequest', 'mozCancel', 'AnimationFrame');
 	timers_1.patchTimer(_global, 'webkitRequest', 'webkitCancel', 'AnimationFrame');
 	for (var i = 0; i < blockingMethods.length; i++) {
